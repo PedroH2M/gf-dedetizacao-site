@@ -545,24 +545,44 @@
 
 @media (max-width: 640px) {
   .logoGf {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   .logoText {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .headerContent a {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .headerContent a svg {
+    width: 16px;
+    height: 16px;
   }
   
   .title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
-
-
   .sectionTitle {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .serviceContent h3 {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .serviceContent p {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .serviceList li {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
   }
 }
