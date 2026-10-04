@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 import Image from "next/image";
-import { Bug, Rat, Droplets, Phone, Zap, Skull, ShieldAlert, ShieldCheck, Award, Clock, ThumbsUp, MessageCircle } from "lucide-react";
+import { Bug, Rat, Droplets, Phone, Zap, Skull, ShieldAlert, ShieldCheck, Award, Clock, ThumbsUp, MessageCircle, MapPin } from "lucide-react";
 
 export default function Home() {
   return (
@@ -177,6 +177,57 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      {/* Footer */}
+      <footer className={styles.footer}>
+        <div className={`container ${styles.footerGrid}`}>
+          <div className={styles.footerBrand}>
+            <div className={styles.logo}>
+              <span className={styles.logoGf}>GF</span>
+              <span className={styles.logoText}>Dedetização</span>
+            </div>
+            <p className={styles.footerDescription}>
+              Protegendo sua família e seu patrimônio com excelência técnica e máxima segurança contra todas as pragas urbanas.
+            </p>
+          </div>
+
+          <div className={styles.footerLinks}>
+            <h4>Serviços Rápidos</h4>
+            <ul>
+              <li><a href="#servicos">Dedetização Geral</a></li>
+              <li><a href="#servicos">Desratização</a></li>
+              <li><a href="#servicos">Tratamento de Madeira (Cupins)</a></li>
+              <li><a href="#servicos">Limpeza de Caixa D'água</a></li>
+            </ul>
+          </div>
+
+          <div className={styles.footerContact}>
+            <h4>Fale Conosco</h4>
+            <ul>
+              <li>
+                <Phone size={18} className={styles.footerIcon} />
+                <a href="https://wa.me/5583988069060?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista." target="_blank" rel="noreferrer">
+                  (83) 98806-9060
+                </a>
+              </li>
+              <li>
+                <Clock size={18} className={styles.footerIcon} />
+                <span>Atendimento Rápido e Eficiente</span>
+              </li>
+              <li>
+                <MapPin size={18} className={styles.footerIcon} />
+                <span>Atendendo toda a região</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className={styles.footerBottom}>
+          <div className="container">
+            <p>&copy; {new Date().getFullYear()} GF Dedetização. Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
