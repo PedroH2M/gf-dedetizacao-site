@@ -21,14 +21,7 @@ export default function Home() {
       <main className={styles.main}>
         {/* Hero Section */}
         <section className={styles.hero}>
-          <Image 
-            src="/hero_bg.jpg" 
-            alt="GF Dedetização Background" 
-            fill 
-            className={styles.heroBgImage} 
-            priority
-          />
-          <div className={styles.heroOverlay}></div>
+          <div className={styles.heroBackground}></div>
           <div className={`container ${styles.heroContainer}`}>
             <div className={styles.heroText}>
               <div className={styles.badge}>
