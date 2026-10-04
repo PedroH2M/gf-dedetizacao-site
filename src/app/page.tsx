@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 import Image from "next/image";
-import { Bug, Rat, Droplets, Phone, Zap, Skull, ShieldAlert } from "lucide-react";
+import { Bug, Rat, Droplets, Phone, Zap, Skull, ShieldAlert, ShieldCheck } from "lucide-react";
 
 export default function Home() {
   return (
@@ -44,6 +44,22 @@ export default function Home() {
                 </a>
               </div>
             </div>
+            <div className={styles.heroVisual}>
+              <div className={`glass ${styles.floatCard} ${styles.card1}`}>
+                <ShieldCheck size={32} color="var(--primary)" />
+                <div>
+                  <strong>100% Garantido</strong>
+                  <p>Produtos seguros</p>
+                </div>
+              </div>
+              <div className={`glass ${styles.floatCard} ${styles.card2}`}>
+                <Bug size={32} color="var(--accent)" />
+                <div>
+                  <strong>Fim dos Insetos</strong>
+                  <p>Resultado Imediato</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -82,7 +98,7 @@ export default function Home() {
 
           <div className={styles.serviceRow}>
             <div className={styles.serviceImageWrapper}>
-              <Image src="/service_dedetizacao.jpg" alt="Dedetização Profissional" width={600} height={450} className={styles.serviceImage} />
+              <Image src="/service_dedetizacao_v2.jpg" alt="Dedetização Profissional" width={600} height={450} className={styles.serviceImage} />
             </div>
             <div className={styles.serviceContent}>
               <h3 className="text-primary-gradient">Dedetização e Desratização</h3>
@@ -97,7 +113,7 @@ export default function Home() {
 
           <div className={`${styles.serviceRow} ${styles.reverse}`}>
             <div className={styles.serviceImageWrapper}>
-              <Image src="/service_cupim.jpg" alt="Descupinização e Tratamento de Madeira" width={600} height={450} className={styles.serviceImage} />
+              <Image src="/service_cupim_v2.jpg" alt="Descupinização e Tratamento de Madeira" width={600} height={450} className={styles.serviceImage} />
             </div>
             <div className={styles.serviceContent}>
               <h3 className="text-primary-gradient">Tratamento de Madeira (Cupins)</h3>
@@ -112,7 +128,7 @@ export default function Home() {
 
           <div className={styles.serviceRow}>
             <div className={styles.serviceImageWrapper}>
-              <Image src="/service_agua.jpg" alt="Limpeza de Caixa D'água" width={600} height={450} className={styles.serviceImage} />
+              <Image src="/service_agua_v2.jpg" alt="Limpeza de Caixa D'água" width={600} height={450} className={styles.serviceImage} />
             </div>
             <div className={styles.serviceContent}>
               <h3 className="text-primary-gradient">Limpeza de Caixa D'água</h3>
