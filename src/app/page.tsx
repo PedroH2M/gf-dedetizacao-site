@@ -29,7 +29,7 @@ export default function Home() {
                 <span>Especialistas no Controle de Pragas</span>
               </div>
               <h1 className={styles.title}>
-                O Fim das Pragas. <br/>
+                O Fim das Pragas. <br />
                 <span className="text-primary-gradient">A Sua Paz.</span>
               </h1>
               <p className={styles.description}>
@@ -70,7 +70,7 @@ export default function Home() {
               <h2 className={styles.sectionTitle}>Alvos Eliminados</h2>
               <p className={styles.sectionSubtitle}>Nenhuma praga sobrevive. Focamos diretamente na ameaça.</p>
             </div>
-            
+
             <div className={styles.alvosGrid}>
               {[
                 { name: "Baratas", icon: Bug },
@@ -150,7 +150,7 @@ export default function Home() {
               <p className={styles.sobreDescription}>
                 Nossa prioridade é devolver a tranquilidade para sua casa ou empresa. Trabalhamos com métodos seguros, garantidos e tecnologia de ponta para eliminar qualquer ameaça.
               </p>
-              
+
               <div className={styles.statsGrid}>
                 <div className={styles.statCard}>
                   <div className={styles.statIcon}><Award size={32} /></div>
@@ -216,12 +216,12 @@ export default function Home() {
               </li>
               <li>
                 <MapPin size={18} className={styles.footerIcon} />
-                <span>Atendendo toda a região</span>
+                <span>Atendendo toda a região de João Pessoa, Cabedelo e Santa Rita</span>
               </li>
             </ul>
           </div>
         </div>
-        
+
         <div className={styles.footerBottom}>
           <div className="container">
             <p>&copy; {new Date().getFullYear()} GF Dedetização. Todos os direitos reservados.</p>
