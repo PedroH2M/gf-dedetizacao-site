@@ -1,10 +1,10 @@
 import styles from "./page.module.css";
-import { ShieldCheck, Bug, Droplets, Phone, Zap } from "lucide-react";
+import Image from "next/image";
+import { Bug, Rat, Droplets, Phone, Zap, Skull, ShieldAlert } from "lucide-react";
 
 export default function Home() {
   return (
     <>
-      {/* Header */}
       <header className={styles.header}>
         <div className={`container ${styles.headerContent}`}>
           <div className={styles.logo}>
@@ -21,70 +21,115 @@ export default function Home() {
       <main className={styles.main}>
         {/* Hero Section */}
         <section className={styles.hero}>
-          <div className={styles.heroBackground}></div>
+          <Image 
+            src="/hero_bg.jpg" 
+            alt="GF Dedetização Background" 
+            fill 
+            className={styles.heroBgImage} 
+            priority
+          />
+          <div className={styles.heroOverlay}></div>
           <div className={`container ${styles.heroContainer}`}>
             <div className={styles.heroText}>
               <div className={styles.badge}>
                 <Zap size={16} color="var(--primary)" />
-                <span>Atendimento Rápido e Seguro</span>
+                <span>Especialistas no Controle de Pragas</span>
               </div>
               <h1 className={styles.title}>
-                Proteção Absoluta contra <br/>
-                <span className="text-primary-gradient">Pragas Urbanas</span>
+                O Fim das Pragas. <br/>
+                <span className="text-primary-gradient">A Sua Paz.</span>
               </h1>
               <p className={styles.description}>
-                Segurança para sua família e empresa. Serviços especializados de dedetização, desratização e descupinização na sua região.
+                Nós eliminamos o problema pela raiz. Métodos seguros, tecnologia de ponta e garantia de um ambiente livre de insetos e roedores.
               </p>
               <div className={styles.heroActions}>
-                <a href="https://wa.me/5583988069060?text=Ol%C3%A1%2C%20preciso%20de%20uma%20dedetiza%C3%A7%C3%A3o%20urgente." className="btn btn-primary" target="_blank" rel="noreferrer">
-                  Solicitar Visita Técnica
+                <a href="https://wa.me/5583988069060?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20visita." className="btn btn-accent" target="_blank" rel="noreferrer">
+                  Chamar no WhatsApp
                 </a>
-                <a href="#servicos" className={`btn ${styles.btnOutline}`}>
-                  Ver Serviços
+                <a href="#alvos" className={`btn ${styles.btnOutline}`}>
+                  Ver Nossos Alvos
                 </a>
-              </div>
-            </div>
-            
-            <div className={styles.heroVisual}>
-              <div className={`glass ${styles.floatCard} ${styles.card1}`}>
-                <ShieldCheck size={32} color="var(--primary)" />
-                <div>
-                  <strong>100% Garantido</strong>
-                  <p>Produtos seguros</p>
-                </div>
-              </div>
-              <div className={`glass ${styles.floatCard} ${styles.card2}`}>
-                <Bug size={32} color="var(--accent)" />
-                <div>
-                  <strong>Fim dos Insetos</strong>
-                  <p>Resultado Imediato</p>
-                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Serviços */}
+        {/* Nossos Alvos (Mirando as pragas igual a logo) */}
+        <section id="alvos" className={styles.alvosSection}>
+          <div className={`container`}>
+            <div className={styles.sectionHeader}>
+              <h2 className={styles.sectionTitle}>Alvos Eliminados</h2>
+              <p className={styles.sectionSubtitle}>Nenhuma praga sobrevive. Focamos diretamente na ameaça.</p>
+            </div>
+            
+            <div className={styles.alvosGrid}>
+              {[
+                { name: "Baratas", icon: Bug },
+                { name: "Ratos", icon: Rat },
+                { name: "Escorpiões", icon: ShieldAlert },
+                { name: "Formigas", icon: Bug },
+                { name: "Cupins", icon: Skull },
+              ].map((alvo, i) => (
+                <div key={i} className={styles.targetWrapper}>
+                  <div className={styles.targetIcon}>
+                    <alvo.icon size={45} />
+                  </div>
+                  <span className={styles.targetName}>{alvo.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Serviços Detalhados com Imagens Geradas */}
         <section id="servicos" className={`container ${styles.servicesSection}`}>
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>Nossos Serviços</h2>
-            <p className={styles.sectionSubtitle}>Especialistas no combate a todas as pragas urbanas.</p>
+            <h2 className={styles.sectionTitle}>Serviços Premium</h2>
           </div>
-          <div className={styles.grid}>
-            {[
-              { title: "Dedetização", desc: "Controle geral de insetos rasteiros e voadores: formigas, baratas, aranhas e escorpiões.", icon: Bug },
-              { title: "Desratização", desc: "Erradicação e controle seguro de roedores (ratos, camundongos e ratazanas).", icon: ShieldCheck },
-              { title: "Descupinização", desc: "Tratamento profundo contra cupins em móveis e estruturas de madeira.", icon: Zap },
-              { title: "Limpeza de Caixa D'água", desc: "Higienização e desinfecção completa para garantir água pura e segura.", icon: Droplets },
-            ].map((srv, i) => (
-              <div key={i} className={`glass ${styles.card}`}>
-                <div className={styles.cardIcon}>
-                  <srv.icon size={28} />
-                </div>
-                <h3>{srv.title}</h3>
-                <p>{srv.desc}</p>
-              </div>
-            ))}
+
+          <div className={styles.serviceRow}>
+            <div className={styles.serviceImageWrapper}>
+              <Image src="/service_dedetizacao.jpg" alt="Dedetização Profissional" width={600} height={450} className={styles.serviceImage} />
+            </div>
+            <div className={styles.serviceContent}>
+              <h3 className="text-primary-gradient">Dedetização e Desratização</h3>
+              <p>Utilizamos produtos de uso restrito a profissionais que eliminam formigas, baratas, mosquitos, ratos, escorpiões e aranhas sem deixar cheiro ou manchar seus móveis.</p>
+              <ul className={styles.serviceList}>
+                <li>Ação rápida e efeito de longa duração</li>
+                <li>Processo seguro para crianças e pets</li>
+                <li>Equipe técnica altamente qualificada</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={`${styles.serviceRow} ${styles.reverse}`}>
+            <div className={styles.serviceImageWrapper}>
+              <Image src="/service_cupim.jpg" alt="Descupinização e Tratamento de Madeira" width={600} height={450} className={styles.serviceImage} />
+            </div>
+            <div className={styles.serviceContent}>
+              <h3 className="text-primary-gradient">Tratamento de Madeira (Cupins)</h3>
+              <p>Tratamento profundo para madeiras e estruturas. Criamos uma barreira química impenetrável que não só elimina a colônia existente, mas previne futuras infestações no seu patrimônio.</p>
+              <ul className={styles.serviceList}>
+                <li>Injeção e pulverização localizada</li>
+                <li>Preservação total da sua mobília</li>
+                <li>Proteção contínua contra brocas e cupins</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={styles.serviceRow}>
+            <div className={styles.serviceImageWrapper}>
+              <Image src="/service_agua.jpg" alt="Limpeza de Caixa D'água" width={600} height={450} className={styles.serviceImage} />
+            </div>
+            <div className={styles.serviceContent}>
+              <h3 className="text-primary-gradient">Limpeza de Caixa D'água</h3>
+              <p>A água pura é essencial para a saúde. Realizamos a desinfecção e higienização completa dos reservatórios, removendo lodo, bactérias e prevenindo a proliferação de mosquitos da dengue.</p>
+              <ul className={styles.serviceList}>
+                <li>Remoção total de sujeiras e resíduos</li>
+                <li>Padrões rigorosos de higiene</li>
+                <li>Certificado técnico de limpeza</li>
+              </ul>
+            </div>
           </div>
         </section>
       </main>
