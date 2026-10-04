@@ -349,6 +349,88 @@
   font-size: 1.2rem;
 }
 
+/* Sobre Nos */
+.sobreSection {
+  padding: 8rem 0;
+  background: linear-gradient(180deg, rgba(5,5,5,1) 0%, rgba(15,15,15,1) 100%);
+  border-top: 1px solid var(--card-border);
+}
+
+.sobreContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.sobreText {
+  text-align: center;
+  max-width: 1000px;
+}
+
+.sobreDescription {
+  color: #d4d4d8;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 4rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.statCard {
+  background: rgba(20, 20, 20, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.statCard::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.statCard:hover {
+  background: rgba(30, 30, 30, 0.6);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.statCard:hover::before {
+  transform: scaleX(1);
+}
+
+.statIcon {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  padding: 1rem;
+  background: rgba(25, 194, 59, 0.1);
+  border-radius: 50%;
+}
+
+.statCard h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.statCard p {
+  font-size: 1rem;
+  color: #a1a1aa;
+}
+
 /* Responsive */
 @media (max-width: 968px) {
   .heroContainer {

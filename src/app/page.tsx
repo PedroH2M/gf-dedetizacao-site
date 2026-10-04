@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 import Image from "next/image";
-import { Bug, Rat, Droplets, Phone, Zap, Skull, ShieldAlert, ShieldCheck } from "lucide-react";
+import { Bug, Rat, Droplets, Phone, Zap, Skull, ShieldAlert, ShieldCheck, Award, Clock, ThumbsUp, MessageCircle } from "lucide-react";
 
 export default function Home() {
   return (
@@ -138,6 +138,41 @@ export default function Home() {
                 <li>Padrões rigorosos de higiene</li>
                 <li>Certificado técnico de limpeza</li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Sobre Nós */}
+        <section id="sobre" className={styles.sobreSection}>
+          <div className={`container ${styles.sobreContainer}`}>
+            <div className={styles.sobreText}>
+              <h2 className={styles.sectionTitle}>Por que escolher a <span className="text-primary-gradient">GF Dedetização</span>?</h2>
+              <p className={styles.sobreDescription}>
+                Nossa prioridade é devolver a tranquilidade para sua casa ou empresa. Trabalhamos com métodos seguros, garantidos e tecnologia de ponta para eliminar qualquer ameaça.
+              </p>
+              
+              <div className={styles.statsGrid}>
+                <div className={styles.statCard}>
+                  <div className={styles.statIcon}><Award size={32} /></div>
+                  <h4>Profissional Certificado</h4>
+                  <p>Garantia de segurança e normas seguidas à risca.</p>
+                </div>
+                <div className={styles.statCard}>
+                  <div className={styles.statIcon}><Clock size={32} /></div>
+                  <h4>+10 Anos de Experiência</h4>
+                  <p>Atuando com maestria no controle de pragas.</p>
+                </div>
+                <div className={styles.statCard}>
+                  <div className={styles.statIcon}><ThumbsUp size={32} /></div>
+                  <h4>Qualidade e Excelência</h4>
+                  <p>Resultados imediatos e de longa duração.</p>
+                </div>
+                <div className={styles.statCard}>
+                  <div className={styles.statIcon}><MessageCircle size={32} /></div>
+                  <h4>Atendimento Rápido</h4>
+                  <p>Orçamento e suporte agilizado pelo WhatsApp.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
