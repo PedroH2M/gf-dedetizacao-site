@@ -13,20 +13,19 @@ export default function Icon() {
     (
       <div
         style={{
-          fontSize: 22,
-          background: '#0a0a0a',
+          fontSize: 24,
+          background: 'transparent',
           width: '100%',
           height: '100%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: 'white',
-          borderRadius: '6px',
-          fontWeight: 800,
-          border: '2px solid #19c23b',
+          color: '#19c23b',
+          fontWeight: 900,
+          letterSpacing: '-1px',
         }}
       >
-        <span style={{ color: '#19c23b', marginRight: '1px' }}>G</span>F
+        GF
       </div>
     ),
     {
